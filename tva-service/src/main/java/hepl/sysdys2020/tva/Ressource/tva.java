@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
+import java.util.*;
 
 @RestController
 @RequestMapping("/tva")
@@ -21,18 +22,31 @@ public class tva {
 
 
     private DiscoveryClient discoveryClient;
+    @Autowired
+    private HashMap<String, Float> _listtva;
 
-    public tva() {
+    public tva() { }
+
+    @RequestMapping("/")
+    public ArrayList<tvaItems> listtva(){
+        Set<String> keys = _listtva.keySet();
+        ArrayList<tvaItems> list = new ArrayList<tvaItems>();
+        int i = 1;
+        for (String key:keys)
+        {
+            list.add(new tvaItems(i, key, _listtva.get(key)));
+            i++;
+        }
+        return list;
     }
     //ici return de plusieur tuple
 
     @RequestMapping("/{type}")
-    public List<tvaItems> getTVA(@PathVariable("type") String type){
+    public tvaItems getTVA(@PathVariable("type") String type){
 
-
-        //ici dois avoir acces a la bdd et return un tuple
-        return Collections.singletonList(
-                new tvaItems("livres", 6)
-        );
+        if(_listtva.containsKey(type))
+            return new tvaItems(1, type, _listtva.get(type));
+        else
+            return new tvaItems(1, "Default", 21);
     }
 }
