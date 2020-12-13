@@ -29,4 +29,17 @@ public class stockService {
     public void delete(int id){
         stockRepository.deleteById(id);
     }
+
+    public int getLastId(){
+        int i=0;
+        boolean test = true;
+        while(test == true){
+            i++;
+            test = stockRepository.existsById(i);
+        }
+        System.out.println("test id : " + i);
+        return i;
+    }
+
+
 }

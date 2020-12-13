@@ -7,23 +7,24 @@ import javax.persistence.Id;
 @Entity
 public class stockItems {
     @Id
-    @GeneratedValue
     private int idstock;
-
     private String libelle;
     private int quantite;
+    private double prix;
 
     public stockItems() { }
 
-    public stockItems(String libelle, int quantite) {
+    public stockItems(String libelle, int quantite, double prix) {
         this.libelle = libelle;
         this.quantite = quantite;
+        this.prix = prix;
     }
 
-    public stockItems(int idstock, String libelle, int quantite) {
+    public stockItems(int idstock, String libelle, int quantite, double prix) {
         this.idstock = idstock;
         this.libelle = libelle;
         this.quantite = quantite;
+        this.prix = prix;
     }
 
     public int getIdstock() { return idstock; }
@@ -43,12 +44,20 @@ public class stockItems {
         this.quantite = quantite;
     }
 
+    public double getPrix() {
+        return prix;
+    }
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
     @Override
     public String toString() {
         return "stockItems{" +
                 "idstock=" + idstock +
                 ", libelle='" + libelle + '\'' +
                 ", quantite=" + quantite +
+                ", prix=" + prix +
                 '}';
     }
 }
