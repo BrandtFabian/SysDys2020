@@ -20,6 +20,7 @@ public class server {
 
     private DiscoveryClient discoveryClient;
 
+    
     @Autowired
     WebClient.Builder builder;
 

@@ -38,13 +38,15 @@ public class Order {
     }
 
     @RequestMapping("/updateprix/{id}/{prixtot}")
-    public void setPrixTot(@PathVariable("id")Integer id, @PathVariable("prixtot")Integer prixtot){
+    public boolean setPrixTot(@PathVariable("id")Integer id, @PathVariable("prixtot")Integer prixtot){
         orderService.setPrixTot(id, prixtot);
+        return true;
     }
 
     @RequestMapping("/updatestatus/{id}/{status}")
-    public void setPrixTot(@PathVariable("id")Integer id, @PathVariable("status")String status){
+    public boolean setPrixTot(@PathVariable("id")Integer id, @PathVariable("status")String status){
         orderService.setStatus(id, status);
+        return true;
     }
 
     @RequestMapping("/add/{idclient}/{prix}/{status}")
@@ -58,9 +60,15 @@ public class Order {
     }
 
     @RequestMapping("/increaseprix/{id}/{prixtot}")
-    public void IncreasePrixTot(@PathVariable("id")Integer id, @PathVariable("prixtot")Integer prixtot){
+    public boolean IncreasePrixTot(@PathVariable("id")Integer id, @PathVariable("prixtot")Integer prixtot){
         System.out.println(id +":"+prixtot);
         orderService.setIncreasePrixTot(id, prixtot);
+        return true;
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+        return "Mastu****";
     }
 
 }
