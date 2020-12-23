@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model object
+
+@{
+    ViewBag.Title = "Commande user";
+    Layout = "_Layout";
+    var iduser =1;
+    var reponse = ViewData["CartReponse"] as CartReponse;
+}
+
+<h2>Votre Panier</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Image</th>
+        <th>Libelle</th>
+        <th>Quantite</th>
+        <th>PrixUnitaire</th>
+        <th>PrixTotal</th>
+        <th>Supprimer</th>
+    </tr>
+    @foreach (var cart in reponse.Liste)
+    {
+        String ListItems = "http://localhost:5003";
+      
+    <tr>
+        <td><a href="@ListItems">
+                @{
+                    String poster = "/images/";
+                    poster += cart.Libelle+".jpg";
+                }
+                <img width="100" src="@poster">
+            </a>
+        </td>
+        <td>@cart.Libelle</td>
+        <td>@cart.Quantite</td>
+        <td>@cart.PrixUnitaire</td>
+        <td>@cart.PrixTotal</td>
+        <td>
+            @using (Html.BeginForm(actionName: "DeleteItemFromCart","Cart",FormMethod.Post))
+            {
+                <input type="hidden" value=@cart.Libelle name="libelle" id="libelle"/>
+                <input type="hidden" value="@iduser" name="iduser" id="iduser"/>
+                <input type="submit" value="Supprimer" id="supprimer"/>
+            }
+        
+        </td>
+    </tr>
+   
+    }
+</table>
+
+@using (Html.BeginForm(actionName: "CheckOut","Cart",FormMethod.Post))
+{
+
+    <label>Payer votre commande de @reponse.PrixTotal €</label><br/>
+    <input type="hidden" value="@iduser" id="iduser" name="iduser"/>
+    <input type="submit" value="Submit" id="submit"/>
+
+}

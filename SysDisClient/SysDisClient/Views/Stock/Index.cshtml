@@ -1,0 +1,61 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "Index stocks";
+    Layout = "_Layout";
+    Console.WriteLine(ViewData["StockReponse"]);
+    var reponse = ViewData["StockReponse"] as StockReponse;
+    var iduser = 1;
+    String CommandUser = "http://localhost:5003/server/panier/"+iduser;
+}
+
+<h2>Liste des fournitures</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Libelle</th>
+        <th>Quantite</th>
+        <th>Prix</th>
+        <th>Image</th>
+        <th>Quantité voulue</th>
+        <th>Disponible</th>
+        
+    </tr>
+    
+    @foreach (var stock in reponse.Liste)
+    {
+        @using (Html.BeginForm(actionName: "Submit", "Stock", FormMethod.Post))
+        {
+           
+            <tr>
+
+                <td>@stock.Libelle</td>
+                <td>@stock.Quantite</td>
+                <td>@stock.Prix</td>
+                <td>
+                    @{
+                        String poster = "/images/";
+                        poster += stock.Libelle + ".jpg";
+                    }
+                    <img width="100" src="@poster">
+                </td>
+                <td>
+                    <input type="number" min="0" value=0 min max="@stock.Quantite" name="quantite" id="quantite"/>
+                </td>
+                <td>
+                    <input type="hidden" value="@stock.Id" name="iditem" id="iditem"/>
+                    <input type="hidden" value="@iduser" name="iduser" id="iduser">
+                    <input type="submit" value="Dipsonible" id="submit"/>
+                </td>
+            </tr>
+            
+        }
+    }
+</table>
+    
+<a href="@CommandUser">
+    <label>Voir votre commande</label><br/>
+</a>
+                                                                       
+   
+
+

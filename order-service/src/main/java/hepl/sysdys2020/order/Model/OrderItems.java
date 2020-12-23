@@ -9,7 +9,6 @@ import java.util.List;
 public class OrderItems {
 
     @Id
-    @GeneratedValue
     private int idOrder; //equivaut a id caddie pour plus de facilite
     private int idClient;
     private String status;

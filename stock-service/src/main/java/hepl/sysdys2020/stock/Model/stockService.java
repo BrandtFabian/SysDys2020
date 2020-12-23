@@ -30,6 +30,12 @@ public class stockService {
         stockRepository.deleteById(id);
     }
 
+    public void ReturnItem(int id){
+
+
+
+    }
+
     public int getLastId(){
         int i=0;
         boolean test = true;

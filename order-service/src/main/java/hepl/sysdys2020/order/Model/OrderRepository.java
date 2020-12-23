@@ -1,5 +1,6 @@
 package hepl.sysdys2020.order.Model;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface OrderRepository extends CrudRepository<OrderItems, Integer> { }
+public interface OrderRepository extends JpaRepository<OrderItems, Integer> { }

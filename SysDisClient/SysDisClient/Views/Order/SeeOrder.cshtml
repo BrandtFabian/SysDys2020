@@ -1,0 +1,35 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    var reponse = ViewData["OrderReponse"] as OrderReponse;
+}
+
+<h2>Liste des comandes en cours</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th></th>
+        <th>Numero de la commande</th>
+        <th>Status</th>
+        <th>Prix total de la commande</th>
+
+    </tr>
+    
+    @foreach (var order in reponse.Liste)
+    {
+        <tr>
+            <td>
+                @{
+                    String poster = "/images/Boites.jpg";
+                   
+                }
+                <img width="100" src="@poster">
+            </td>
+            
+            <td>@order.IdOrder</td>
+            <td>@order.Status</td>
+            <td>@order.PrixTotal</td>
+        </tr>
+    }
+</table>

@@ -1,6 +1,7 @@
 package hepl.sysdys2020.order.Ressource;
 
 import com.netflix.discovery.DiscoveryClient;
+import hepl.sysdys2020.order.Model.ListOrderItems;
 import hepl.sysdys2020.order.Model.OrderItems;
 import hepl.sysdys2020.order.Model.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,13 @@ public class Order {
         return orderItems;
     }
 
+    @RequestMapping("user/{id}")
+    public ListOrderItems getALlOrderById(@PathVariable("id") Integer id){
+        return orderService.getAllOrderByIdClient(id);
+    }
+
+
+
     @RequestMapping("/updateprix/{id}/{prixtot}")
     public boolean setPrixTot(@PathVariable("id")Integer id, @PathVariable("prixtot")Integer prixtot){
         orderService.setPrixTot(id, prixtot);
@@ -50,8 +58,9 @@ public class Order {
     }
 
     @RequestMapping("/add/{idclient}/{prix}/{status}")
-    public void addOrder(@PathVariable("idclient")Integer idclient, @PathVariable("prix") double prix, @PathVariable("status") String status){
-        orderService.addOrder(idclient, prix, status);
+    public int addOrder(@PathVariable("idclient")Integer idclient, @PathVariable("prix") double prix, @PathVariable("status") String status){
+        int idorder=orderService.addOrder(idclient, prix, status);
+        return idorder;
     }
 
     @RequestMapping("/delete/{id}")

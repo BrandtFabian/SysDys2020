@@ -37,6 +37,14 @@ public class CartItems {
         this.idCart = idCart;
     }
 
+    public int getIdGeneral() {
+        return idGeneral;
+    }
+
+    public void setIdGeneral(int idGeneral) {
+        this.idGeneral = idGeneral;
+    }
+
     public int getIdClient() {
         return idClient;
     }

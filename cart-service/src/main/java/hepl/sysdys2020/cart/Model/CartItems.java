@@ -1,20 +1,27 @@
 package hepl.sysdys2020.cart.Model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class CartItems {
 
+
+
+
     @Id
-    @GeneratedValue
     private int idGeneral;
     private int idCart;
     private int idClient;
     private int idProduit;
     private int quantite;
     private boolean isVirtual;
+
+
 
     public CartItems(){}
     public CartItems(int idGeneral, int idCart, int idClient, int idProduit, int quantite, boolean isVirtual){
@@ -34,6 +41,14 @@ public class CartItems {
         this.isVirtual = isVirtual;
     }
 
+
+    public int getIdGeneral() {
+        return idGeneral;
+    }
+
+    public void setIdGeneral(int idGeneral) {
+        this.idGeneral = idGeneral;
+    }
     public int getIdCart() {
         return idCart;
     }

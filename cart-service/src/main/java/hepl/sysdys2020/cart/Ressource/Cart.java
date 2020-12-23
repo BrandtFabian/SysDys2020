@@ -52,8 +52,12 @@ public class Cart {
     }
 
     @RequestMapping("/add/{idcart}/{idclient}/{idproduit}/{quantite}")
-    private void addCart(@PathVariable("idcart") Integer idCart, @PathVariable("idclient") Integer idClient,
-                        @PathVariable("idproduit") Integer idproduit, @PathVariable("quantite") Integer quantite){
+    private boolean addCart(@PathVariable("idcart") Integer idCart, @PathVariable("idclient") Integer idClient,
+                            @PathVariable("idproduit") Integer idproduit, @PathVariable("quantite") Integer quantite){
+        if(idCart==0)
+        {
+            return false;
+        }
         CartItems cartItems = cartService.getCart(idCart, idClient, idproduit);
         //s'il existe MAJ
         if(cartItems != null){
@@ -65,6 +69,24 @@ public class Cart {
             CartItems newcartItems = new CartItems(idGeneral, idCart, idClient, idproduit, quantite, true);
             cartService.SaveOrUpdate(newcartItems);
         }
+        return true;
+    }
+
+    @PostMapping("/add")
+    private boolean addCart(@RequestBody CartItems carti ){
+
+        CartItems cartItems = cartService.getCart(carti.getIdCart(), carti.getIdClient(), carti.getIdProduit());
+        //s'il existe MAJ
+        if(cartItems != null){
+            cartItems.setQuantite(carti.getQuantite());
+            cartService.SaveOrUpdate(cartItems);
+        }//s'il existe pas, on le crée
+        else {
+            int idGeneral = cartService.getLastId();
+            CartItems newcartItems = new CartItems(idGeneral, carti.getIdCart(), carti.getIdClient(), carti.getIdProduit(), carti.getQuantite(), carti.isVirtual());
+            cartService.SaveOrUpdate(newcartItems);
+        }
+        return true;
     }
 
     @RequestMapping("/delete/{idcart}/{idclient}/{idproduit}")
@@ -72,6 +94,14 @@ public class Cart {
                          @PathVariable("idproduit") Integer idproduit){
         boolean i = cartService.deleteCartById(idCart, idClient, idproduit);
         System.out.println(i);
+        return i;
+    }
+
+    @RequestMapping("/create/cart/{id}")
+    private int createCart(@PathVariable("id") Integer idclient)
+    {
+
+        int i=cartService.GetNewCart(idclient);
         return i;
     }
 }

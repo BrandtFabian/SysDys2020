@@ -18,15 +18,22 @@ public class CheckOut {
     @Autowired
     WebClient.Builder builder;
 
-    @RequestMapping("/fin/{id}/{type}")
-    public void fincommande(@PathVariable("id")Integer id, @PathVariable("type")String type){
+    @RequestMapping("/attente/{id}/{type}")
+    public Boolean Waitingcommande(@PathVariable("id")Integer id, @PathVariable("type")String type){
         //todo rajouter dans le prix total selon le type
         int prix = 5;
-        if(type.equals("EXPRESS"))
+        if(type=="express")
             prix = 10;
         boolean bool = builder.build().get().uri("http://order-service/order/increaseprix/"+id+"/"+prix).retrieve().bodyToMono(boolean.class).block();
         //todo changé la commande de en prepa en livraison
-        builder.build().get().uri("http://order-service/order/updatestatus/"+id+"/EXPEDIEE").retrieve().bodyToMono(boolean.class).block();
+        builder.build().get().uri("http://order-service/order/updatestatus/"+id+"/Attente").retrieve().bodyToMono(boolean.class).block();
+    return bool;
+    }
 
+    @RequestMapping("/fin/{id}")
+    public boolean fincommande(@PathVariable("id")Integer id){
+        //todo changé la commande de en prepa en livraison
+        boolean r= builder.build().get().uri("http://order-service/order/updatestatus/"+id+"/Expedie").retrieve().bodyToMono(boolean.class).block();
+        return r;
     }
 }

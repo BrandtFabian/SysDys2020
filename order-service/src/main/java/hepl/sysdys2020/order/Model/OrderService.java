@@ -20,6 +20,24 @@ public class OrderService {
         return orderItems;
     }
 
+    public ListOrderItems getAllOrderByIdClient(int id){
+        List<OrderItems> orderlistitem = new ArrayList<>();
+
+
+        List<OrderItems> cart=orderRepository.findAll();
+
+        for (OrderItems x: cart) {
+            if(x.getIdClient()==id) {
+                orderlistitem.add(
+                        new OrderItems(x.getIdOrder(),x.getIdClient(),x.getStatus(),x.getPrixTotal()));};
+        }
+        ListOrderItems returnitems= new ListOrderItems();
+        returnitems.setList(orderlistitem);
+
+
+        return returnitems;
+    }
+
     public OrderItems getOrderById(int id){
         OrderItems orderItems = orderRepository.findById(id).get();
         return orderItems;
@@ -55,9 +73,15 @@ public class OrderService {
         }
     }
 
-    public void addOrder(int id, double prix, String status){
-        OrderItems orderItems = new OrderItems(id, status, prix);
-            orderRepository.save(orderItems);
+    public int addOrder(int id, double prix, String status){
+
+
+        int lastid=getLastId();
+        OrderItems orderItems = new OrderItems(lastid,id, status, prix);
+        orderRepository.save(orderItems);
+
+            return lastid;
+
     }
 
     public void removeOrder(int id){
@@ -86,6 +110,16 @@ public class OrderService {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public int getLastId(){
+        int i=0;
+        boolean test = true;
+        while(test == true){
+            i++;
+            test = orderRepository.existsById(i);
+        }
+        return i;
     }
 
 }
