@@ -44,7 +44,18 @@
                 <td>
                     <input type="hidden" value="@stock.Id" name="iditem" id="iditem"/>
                     <input type="hidden" value="@iduser" name="iduser" id="iduser">
-                    <input type="submit" value="Dipsonible" id="submit"/>
+                    @{
+                        if (@stock.Quantite >0)
+                        {
+                            <input type="submit" value="Dipsonible" id="submit"/>
+                        }
+                        else
+                        {
+                            <p style="color: red">Pas disponible pour le moement</p>
+                        }
+                       
+                    }
+                    
                 </td>
             </tr>
             

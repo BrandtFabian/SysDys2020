@@ -30,6 +30,11 @@ public class Cart {
         return cartService.getAllCart();
     }
 
+    @RequestMapping("/allcarttrue")
+    public List<Integer> getAllCarttrue(){
+        return cartService.getAllCartTrue();
+    }
+
     @RequestMapping("/{id}")
     public ListCartItems getCart(@PathVariable("id") Integer id){
         return cartService.getCartbyId(id);
@@ -43,6 +48,15 @@ public class Cart {
     @RequestMapping("/delete/{id}")
     public void deleteCart(@PathVariable("CartItems") Integer id){
         cartService.delete(id);
+    }
+    @RequestMapping("/changeidclient/{id}/{idclient}")// id du cart a rechecher // idclient pour remplacer
+    public boolean UpDate(@PathVariable("id") Integer id,@PathVariable("idclient") Integer idclient){
+        return cartService.UpdateCart(id,idclient);
+    }
+
+    @RequestMapping("/deletecart/{id}")
+    public boolean DeleteCart(@PathVariable("id") Integer id){
+        return cartService.delete(id);
     }
 
     @PostMapping("/cart")

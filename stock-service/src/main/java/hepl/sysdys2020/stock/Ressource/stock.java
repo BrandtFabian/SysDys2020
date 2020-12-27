@@ -7,9 +7,12 @@ import hepl.sysdys2020.stock.Model.stockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 @RestController
 @RequestMapping("/stock")
@@ -21,6 +24,9 @@ public class stock {
     @Autowired
     stockService stockService;
 
+    @Autowired
+    WebClient.Builder builder;
+
     private DiscoveryClient discoveryClient;
 
     public stock() { }
@@ -29,6 +35,7 @@ public class stock {
     public UserStock getAllStock(){
         UserStock userStock = new UserStock();
         userStock.setUserStock(stockService.getAllStock());
+
         return userStock;
     }
 

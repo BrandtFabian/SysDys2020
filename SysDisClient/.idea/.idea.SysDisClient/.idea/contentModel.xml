@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SysDisClient.961211619.00" t="ExcludeRecursive" />
+    <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SysDisClient.1061213366.00" t="ExcludeRecursive" />
     <e p="C:\Users\legra\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\legra\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient" t="IncludeFlat">
+    <e p="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SysDisClient" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="AccesDatabase" t="Include">
+            <e p="Context.cs" t="Include" />
+            <e p="DbManager.cs" t="Include" />
+          </e>
           <e p="CartController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="OrderController.cs" t="Include" />
@@ -26,10 +30,12 @@
             <e p="Order.cs" t="Include" />
             <e p="Stock.cs" t="Include" />
             <e p="StructureCart.cs" t="Include" />
+            <e p="Users.cs" t="Include" />
           </e>
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="OrderReponse.cs" t="Include" />
           <e p="ReferenceReponse.cs" t="Include" />
+          <e p="ReponseMenu.cs" t="Include" />
           <e p="StockReponse.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -75,6 +81,8 @@
           </e>
           <e p="Stock" t="Include">
             <e p="Index.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="LoginRappel.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">

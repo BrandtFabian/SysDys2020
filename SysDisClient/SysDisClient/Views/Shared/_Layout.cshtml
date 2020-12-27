@@ -1,5 +1,6 @@
 ﻿@{
-    var iduser = 1;
+    var reponse = ViewData["ReponseMenu"] as ReponseMenu;
+    
 }
 
 <!DOCTYPE html>
@@ -26,11 +27,28 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Stock" asp-action="Index">Stock</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-route-id="@iduser" asp-controller="Cart" asp-action="CommandeUser" >Panier</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="CommandeUser" >Panier</a>
                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-route-id="@iduser" asp-controller="Order" asp-action="SeeOrder" >Historique commande</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="WantSeeOrder" >Historique commande</a>
                     </li>
+                    <li class="nav-item">
+                         @{
+                             if (reponse.Connected == false)
+                             {
+                                 <a class="nav-link text-dark" asp-area="" asp-controller="Stock" asp-action="Login">Connectez-vous</a>
+
+                             }
+                         }
+                       </li>
+                    <li class="nav-item" }>
+                        @{
+                            if (reponse.Connected == true)
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Stock" asp-action="LogOut">LogOut</a>
+                        
+                            }
+                                }</li>
                 </ul>
             </div>
         </div>

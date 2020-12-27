@@ -4,7 +4,7 @@
 @{
     ViewBag.Title = "Commande user";
     Layout = "_Layout";
-    var iduser =1;
+  
     var reponse = ViewData["CartReponse"] as CartReponse;
 }
 
@@ -39,7 +39,6 @@
             @using (Html.BeginForm(actionName: "DeleteItemFromCart","Cart",FormMethod.Post))
             {
                 <input type="hidden" value=@cart.Libelle name="libelle" id="libelle"/>
-                <input type="hidden" value="@iduser" name="iduser" id="iduser"/>
                 <input type="submit" value="Supprimer" id="supprimer"/>
             }
         
@@ -53,7 +52,6 @@
 {
 
     <label>Payer votre commande de @reponse.PrixTotal €</label><br/>
-    <input type="hidden" value="@iduser" id="iduser" name="iduser"/>
     <input type="submit" value="Submit" id="submit"/>
 
 }

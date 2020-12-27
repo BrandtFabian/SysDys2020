@@ -1,0 +1,24 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2 style="color: red">Vous devez etre connecter pour accéder à cette partie du site! </h2>
+@using (Html.BeginForm(actionName: "MustLog", "Stock", FormMethod.Post))
+{
+    <div id="FormulaireConnection" class="row register-form">
+        <div class="col-md-8 offset-md-2">
+            <h1>Connection</h1>
+            <div class="form-row form-group">
+                <div class="col-sm-4 label-column"><label class="col-form-label">Nom d'utilisateur</label></div>
+                <div class="col-sm-6 input-column"><input id="name" name="name" type="text" class="form-control" required/></div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-sm-4 label-column"><label class="col-form-label">Mot de passe</label></div>
+                <div class="col-sm-6 input-column"><input id="pwd" name="pwd" type="password" class="form-control" required/></div>
+            </div><input type="submit" class="btn btn-light submit-button" value="connecter" id="submit"/>
+        </div>
+    </div>
+}

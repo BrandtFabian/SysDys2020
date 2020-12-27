@@ -28,12 +28,27 @@ public class server {
 
     @RequestMapping("/stock/all")
     public UserStock getStockAll(){
+        int i=0;
         UserStock userStock = builder.build()
                 .get()
                 .uri("http://stock-service/stock/all")
                 .retrieve()
                 .bodyToMono(UserStock.class)
                 .block();
+
+        List<Integer> listint = builder.build()
+                .get()
+                .uri("http://cart-service/cart/allcarttrue")
+                .retrieve()
+                .bodyToMono(List.class)
+                .block();
+
+        for (stockItems x:userStock.getUserStock() )
+        {
+            x.setQuantite(x.getQuantite()-listint.get(i));
+            i++;
+        }
+
         return userStock;
     }
 
@@ -86,6 +101,18 @@ public class server {
         }
 
         return 0;
+    }
+    @RequestMapping("/user/panier/{id}/{idclient}")
+    public boolean ChangeCartUser(@PathVariable("id") Integer id,@PathVariable("idclient") Integer idclient) {
+        boolean ok = builder.build()
+                .get()
+                .uri("http://cart-service/cart/changeidclient/"+id+"/"+idclient)
+                .retrieve()
+                .bodyToMono(boolean.class)
+                .block();
+
+
+        return ok;
     }
 
     @RequestMapping("get/panier/{id}")//afficher panier par id client
@@ -280,6 +307,64 @@ public class server {
                 .block();
         return orderItems;
     }
+
+    @RequestMapping("/deletecart/{id}")
+    public  Boolean DeleteCartAfterOrder(@PathVariable("id")Integer id) {
+        boolean orderItems = builder.build()
+                .get()
+                .uri("http://cart-service/cart/deletecart/" + id)
+                .retrieve()
+                .bodyToMono(boolean.class)
+                .block();
+        return orderItems;
+    }
+
+    /*
+    @PostMapping("/users/add")
+    public boolean AddUser(@RequestBody Users user) {
+
+        boolean ok =builder.build()
+                .post()
+                .uri("http://users-service/users/add/user")
+                .bodyValue(user)
+                .retrieve()
+                .bodyToMono(boolean.class)
+                .block();
+
+
+        return ok;
+    }
+
+     */
+    @RequestMapping("/users/getactive")
+    public int AddUser() {
+
+        int ok =builder.build()
+                .get()
+                .uri("http://users-service/users/getactive")
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+
+
+        return ok;
+    }
+
+    /*
+    @PostMapping("/users/exist")
+    public int ExistUser(@RequestBody Users user) {
+
+        int ok =builder.build()
+                .post()
+                .uri("http://users-service/users/exist")
+                .bodyValue(user)
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+        return ok;
+    }
+    */
+
 
 
 }

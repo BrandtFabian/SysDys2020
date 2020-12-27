@@ -19,6 +19,40 @@ public class CartService {
         cartRepository.findAll().forEach((cartItemsList::add));
         return cartItemsList;
     }
+    public List<Integer> getAllCartTrue(){
+
+        int objet1=0;
+        int objet2=0;
+        int objet3=0;
+        List<Integer> cartItemsList = new ArrayList<>();
+
+        List<CartItems> cart=cartRepository.findAll();
+
+        for (CartItems x: cart) {
+            if(x.isVirtual()==true) {
+                if(x.getIdProduit()==1)
+                {
+                    objet1=objet1+x.getQuantite();
+                }
+                else
+                {
+                    if(x.getIdProduit()==2)
+                    {
+                        objet2=objet2+x.getQuantite();
+                    }
+                    else
+                    {
+                        objet3=objet3+x.getQuantite();
+                    }
+                }
+
+                       };
+        }
+        cartItemsList.add(objet1);
+        cartItemsList.add(objet2);
+        cartItemsList.add(objet3);
+        return cartItemsList;
+    }
 
 
 
@@ -39,6 +73,95 @@ public class CartService {
             return returncartItemsList;
             }
 
+    public int GetCurrentCart(int id) {
+
+        List<CartItems> cartItemsList = new ArrayList<>();
+
+
+        List<CartItems> cart=cartRepository.findAll();
+
+        for (CartItems x: cart) {
+            if(x.isVirtual()==true && x.getIdClient()==id) {
+
+                     return x.getIdCart();
+            };
+        }
+      return 0;
+    }
+
+    public boolean UpdateCart(int id,int idclient) {
+
+        List<CartItems> cartItemsLista = new ArrayList<>();
+        int lastid=0;
+        CartItems cartchange = new CartItems();
+        List<CartItems> cart=cartRepository.findAll();
+
+        for (CartItems x: cart) {
+            if(lastid<x.getIdCart())
+            {
+                lastid=x.getIdCart();
+            }
+            if(x.isVirtual()==true && x.getIdCart()==id) {
+                cartItemsLista.add( new CartItems(x.getIdGeneral(),x.getIdCart(),x.getIdClient(),x.getIdProduit(),x.getQuantite(),x.isVirtual()));};
+        }
+
+        // liste (panier) ancien
+
+        // idcart change + idclient change
+        int cartcurrent=GetCurrentCart(idclient);
+        if(cartcurrent==0)
+        {
+            cartcurrent=lastid;
+        }
+
+/*
+        cartchange.setIdCart(cartcurrent);
+        cartchange.setIdClient(idclient);
+
+         */
+
+        // recherche l'ancien cart
+        List<CartItems> cartItemsList = new ArrayList<>();
+
+        for (CartItems x: cart) {
+            if(x.isVirtual()==true && x.getIdClient()==idclient) {
+                cartItemsList.add(
+                        new CartItems(x.getIdGeneral(),x.getIdCart(),x.getIdClient(),x.getIdProduit(),x.getQuantite(),x.isVirtual()));};
+        }
+
+        // ajouter les qt dans le nouv cart
+        for( CartItems xi:cartItemsLista)
+        {
+            if(cartItemsList.size()!=0)
+            {
+                for(CartItems x :cartItemsList)
+                {
+                    if(x.getIdProduit()==xi.getIdProduit())
+                    {
+                        x.setQuantite(x.getQuantite()+xi.getQuantite());
+                        cartRepository.save(x);
+                        xi.setVirtual(false);
+
+                    }
+                    else
+                    {
+                        xi.setIdCart(cartcurrent);
+                        xi.setIdClient(idclient);
+                        cartRepository.save(xi);
+                    }
+
+                }
+            }
+            else
+            {
+                xi.setIdCart(cartcurrent);
+                xi.setIdClient(idclient);
+                cartRepository.save(xi);
+            }
+        }
+        return true;
+    }
+
 
 
 
@@ -47,8 +170,19 @@ public class CartService {
                 cartRepository.save(cartItems);
             }
 
-            public void delete(int id){
-                cartRepository.deleteById(id);
+            public boolean delete(int id){
+
+
+
+                List<CartItems> cart=cartRepository.findAll();
+
+                for (CartItems x: cart) {
+                    if(x.isVirtual()==true && x.getIdClient()==id) {
+                       cartRepository.deleteById(x.getIdGeneral());
+                    };
+                }
+
+                return true;
             }
 
             public int getLastId(){
