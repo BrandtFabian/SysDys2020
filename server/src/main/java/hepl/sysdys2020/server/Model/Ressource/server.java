@@ -19,6 +19,7 @@ public class server {
     private RestTemplate restTemplate;
 
     private DiscoveryClient discoveryClient;
+    private boolean firsttimestart=true;
 
     
     @Autowired
@@ -29,24 +30,40 @@ public class server {
     @RequestMapping("/stock/all")
     public UserStock getStockAll(){
         int i=0;
-        UserStock userStock = builder.build()
+        int index=1;
+        UserStock userStock=null;
+         userStock = builder.build()
                 .get()
                 .uri("http://stock-service/stock/all")
                 .retrieve()
                 .bodyToMono(UserStock.class)
                 .block();
 
-        List<Integer> listint = builder.build()
-                .get()
-                .uri("http://cart-service/cart/allcarttrue")
-                .retrieve()
-                .bodyToMono(List.class)
-                .block();
-
-        for (stockItems x:userStock.getUserStock() )
+        if(firsttimestart==true)
         {
-            x.setQuantite(x.getQuantite()-listint.get(i));
-            i++;
+            List<Integer> listint = builder.build()
+                    .get()
+                    .uri("http://cart-service/cart/allcarttrue")
+                    .retrieve()
+                    .bodyToMono(List.class)
+                    .block();
+
+            for (stockItems x:userStock.getUserStock() )
+            {
+                //x.setQuantite(x.getQuantite()-listint.get(i));
+
+                UpdateStockminus(index,listint.get(i));
+                i++;
+                index++;
+            }
+            firsttimestart=false;
+
+            userStock= builder.build()
+                    .get()
+                    .uri("http://stock-service/stock/all")
+                    .retrieve()
+                    .bodyToMono(UserStock.class)
+                    .block();
         }
 
         return userStock;
@@ -126,6 +143,30 @@ public class server {
                 .block();
 
         return listcartItems;
+    }
+    @RequestMapping("update/stockitems/{id}/{quantite}")//afficher panier par id client
+    public void UpdateStock(@PathVariable("id") Integer id,@PathVariable("quantite") Integer quantite) {
+
+        int ok = builder.build()
+                .get()
+                .uri("http://stock-service/stock/update/" + id+"/"+quantite)
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+
+
+    }
+    @RequestMapping("update/stockitemsminus/{id}/{quantite}")//afficher panier par id client
+    public void UpdateStockminus(@PathVariable("id") Integer id,@PathVariable("quantite") Integer quantite) {
+
+        int ok = builder.build()
+                .get()
+                .uri("http://stock-service/stock/updateminus/" + id+"/"+quantite)
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+
+
     }
 
     @RequestMapping("/panier/{id}")//afficher panier par id client
@@ -349,6 +390,20 @@ public class server {
 
         return ok;
     }
+
+    @RequestMapping("/restock/{libelle}")
+    public void Restock(@PathVariable("libelle") String libelle) {
+
+       builder.build()
+                .post()
+                .uri("http://stock-service/stock/message")
+                .bodyValue("demande/"+libelle)
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+    }
+
+
 
     /*
     @PostMapping("/users/exist")

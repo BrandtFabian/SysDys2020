@@ -75,7 +75,7 @@ public class Cart {
         CartItems cartItems = cartService.getCart(idCart, idClient, idproduit);
         //s'il existe MAJ
         if(cartItems != null){
-            cartItems.setQuantite(quantite);
+            cartItems.setQuantite(cartItems.getQuantite()+quantite);
             cartService.SaveOrUpdate(cartItems);
         }//s'il existe pas, on le crée
         else {

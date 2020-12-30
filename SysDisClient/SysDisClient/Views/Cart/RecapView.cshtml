@@ -4,6 +4,7 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
     var reponse = ViewData["CartReponse"] as CartReponse;
+    var user = ViewData["UserReponse"] as UserReponse;
 }
 
 <h2>Recapitulatif de votre commande</h2>
@@ -36,11 +37,48 @@
         </tr>
    
     }
+    
+
 </table>
-@using (Html.BeginForm(actionName: "FinishCommand","Cart",FormMethod.Post))
-{
+  <h2>Profil du client</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Photo de profil</th>
+        <th>Nom du destinaire</th>
+        <th>Son adresse de livraison</th>
+         <th>Votre solde</th>
 
-    <label>Payer votre commande avec les frais de port pour un total de @reponse.PrixTotal €</label><br/>
-    <input type="submit" value="terminer" id="submit"/>
+    </tr>
+    <tr>
+                <td>
+                        @{
+                            String pdp = "/images/";
+                            pdp += user.Nom+".jpg";
+                        }
+                        <img width="100" src="@pdp">
+                </td>
+                <td>@user.Nom</td>
+        <td>@user.Adresse</td>
+        <td>@user.Portefeuille€</td>
+    </tr>
+</table>
 
+@{
+    if (user.Portefeuille > reponse.PrixTotal)
+    {
+        @using (Html.BeginForm(actionName: "FinishCommand","Cart",FormMethod.Post))
+        {
+
+            <label>Payer votre commande avec les frais de port pour un total de @reponse.PrixTotal €</label><br/>
+            <input type="submit" value="terminer" id="submit"/>
+
+        }
+    }
+    else
+    {
+        <label>Cette transaction ne peut être effectué car votre solde est insufisant (votre solde = @user.Portefeuille€ 
+            montant à payer = @reponse.PrixTotal€)</label><br/>
+        
+    }
 }
+

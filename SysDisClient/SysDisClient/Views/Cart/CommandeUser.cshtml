@@ -38,7 +38,9 @@
         <td>
             @using (Html.BeginForm(actionName: "DeleteItemFromCart","Cart",FormMethod.Post))
             {
+               
                 <input type="hidden" value=@cart.Libelle name="libelle" id="libelle"/>
+                <input type="hidden" value=@cart.Quantite name="quantite" id="quantite"/>
                 <input type="submit" value="Supprimer" id="supprimer"/>
             }
         

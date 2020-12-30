@@ -134,6 +134,11 @@ namespace SysDisClient.Controllers
                 idcart = JsonSerializer.Deserialize<int>(responsegetpanier);
             }
            
+            // suprimer
+            var updatepath = "http://localhost:8090/server/update/stockitemsminus/"+iditem+"/"+quantite;
+            HttpResponseMessage responseupdatepath = _httpClient.GetAsync(updatepath).Result;
+            String reponseupdate = responseupdatepath.Content.ReadAsStringAsync().Result;
+            
 
             var path = "http://localhost:8090/server/cart/add/"+idcart+"/"+_currentid+"/"+iditem+"/"+quantite;
            
@@ -144,6 +149,48 @@ namespace SysDisClient.Controllers
             if(responseMessagereSend.IsSuccessStatusCode)
                 return RedirectToAction("CommandeUSer","Cart", new RouteValueDictionary(
                     new { controller = "Cart", action= "CommandeUSer"}));
+
+
+
+            return RedirectToAction();
+        }
+        
+        
+         [HttpPost]
+        public RedirectToActionResult Recommander()
+        {
+            int vistorornot = 0;
+            string sqls = "Select user_id from users where user_id=@id AND username=@name ";
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = sqls;
+            cmd.Parameters.AddWithValue("@id", _currentid);
+            cmd.Parameters.AddWithValue("@name", "visiteur");
+            vistorornot=LookIfNotAVisitor(cmd);
+
+            if (vistorornot == 0)
+            {
+                menu.Connected = true;
+            }
+            else
+            {
+                menu.Connected = false;
+            }
+            Console.WriteLine("Controller stock");
+     
+            //int quantite = Int32.Parse(HttpContext.Request.Form["quantite"]);
+           string libellerestock= HttpContext.Request.Form["libelleitem"];
+            //int iduser = Int32.Parse(HttpContext.Request.Form["iduser"]);
+            int idcart = 0;
+
+            var path = "http://localhost:8090/server/restock/"+libellerestock;
+           
+            HttpResponseMessage responseMessagereSend = _httpClient.GetAsync(path).Result;
+            String responseRes = responseMessagereSend.Content.ReadAsStringAsync().Result;
+            
+            
+            if(responseMessagereSend.IsSuccessStatusCode)
+                return RedirectToAction("Index", new RouteValueDictionary(
+                    new { controller = "Stock", action= "Index"}));
 
 
 

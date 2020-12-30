@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SysDisClient.1061213366.00" t="ExcludeRecursive" />
+    <e p="C:\Users\legra\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SysDisClient.961211619.00" t="ExcludeRecursive" />
     <e p="C:\Users\legra\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\legra\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient" t="IncludeFlat">
+    <e p="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SysDisClient" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -37,6 +37,7 @@
           <e p="ReferenceReponse.cs" t="Include" />
           <e p="ReponseMenu.cs" t="Include" />
           <e p="StockReponse.cs" t="Include" />
+          <e p="UserReponse.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -93,57 +94,23 @@
           <e p="images" t="Include">
             <e p="Boites.jpg" t="Include" />
             <e p="Divers.jpg" t="Include" />
+            <e p="fabian.jpg" t="Include" />
+            <e p="francois.jpg" t="Include" />
             <e p="Jeux.jpg" t="Include" />
             <e p="Livres.jpg" t="Include" />
+            <e p="prof.jpg" t="Include" />
           </e>
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">
-              <e p="dist" t="Include">
-                <e p="css" t="Include">
-                  <e p="bootstrap-grid.css" t="Include" />
-                  <e p="bootstrap-grid.css.map" t="Include" />
-                  <e p="bootstrap-grid.min.css" t="Include" />
-                  <e p="bootstrap-grid.min.css.map" t="Include" />
-                  <e p="bootstrap-reboot.css" t="Include" />
-                  <e p="bootstrap-reboot.css.map" t="Include" />
-                  <e p="bootstrap-reboot.min.css" t="Include" />
-                  <e p="bootstrap-reboot.min.css.map" t="Include" />
-                  <e p="bootstrap.css" t="Include" />
-                  <e p="bootstrap.css.map" t="Include" />
-                  <e p="bootstrap.min.css" t="Include" />
-                  <e p="bootstrap.min.css.map" t="Include" />
-                </e>
-                <e p="js" t="Include">
-                  <e p="bootstrap.bundle.js" t="Include" />
-                  <e p="bootstrap.bundle.js.map" t="Include" />
-                  <e p="bootstrap.bundle.min.js" t="Include" />
-                  <e p="bootstrap.bundle.min.js.map" t="Include" />
-                  <e p="bootstrap.js" t="Include" />
-                  <e p="bootstrap.js.map" t="Include" />
-                  <e p="bootstrap.min.js" t="Include" />
-                  <e p="bootstrap.min.js.map" t="Include" />
-                </e>
-              </e>
               <e p="LICENSE" t="Include" />
             </e>
             <e p="jquery" t="Include">
-              <e p="dist" t="Include">
-                <e p="jquery.js" t="Include" />
-                <e p="jquery.min.js" t="Include" />
-                <e p="jquery.min.map" t="Include" />
-              </e>
               <e p="LICENSE.txt" t="Include" />
             </e>
             <e p="jquery-validation" t="Include">
-              <e p="dist" t="Include">
-                <e p="additional-methods.js" t="Include" />
-                <e p="additional-methods.min.js" t="Include" />
-                <e p="jquery.validate.js" t="Include" />
-                <e p="jquery.validate.min.js" t="Include" />
-              </e>
               <e p="LICENSE.md" t="Include" />
             </e>
             <e p="jquery-validation-unobtrusive" t="Include">

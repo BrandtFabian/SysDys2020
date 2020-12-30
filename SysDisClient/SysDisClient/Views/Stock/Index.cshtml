@@ -23,8 +23,7 @@
     
     @foreach (var stock in reponse.Liste)
     {
-        @using (Html.BeginForm(actionName: "Submit", "Stock", FormMethod.Post))
-        {
+      
            
             <tr>
 
@@ -38,29 +37,45 @@
                     }
                     <img width="100" src="@poster">
                 </td>
-                <td>
-                    <input type="number" min="0" value=0 min max="@stock.Quantite" name="quantite" id="quantite"/>
-                </td>
-                <td>
-                    <input type="hidden" value="@stock.Id" name="iditem" id="iditem"/>
-                    <input type="hidden" value="@iduser" name="iduser" id="iduser">
+               
+               
+                   
                     @{
                         if (@stock.Quantite >0)
                         {
-                            <input type="submit" value="Dipsonible" id="submit"/>
+                            @using (Html.BeginForm(actionName: "Submit", "Stock", FormMethod.Post))
+                            {
+                               <td>
+                                    <input type="number" min="0" value=0 min max="@stock.Quantite" name="quantite" id="quantite"/>
+                                </td>
+                                <td>
+                                <input type="hidden" value="@iduser" name="iduser" id="iduser">
+                                <input type="submit" value="Dipsonible" id="submit"/>
+                                <input type="hidden" value="@stock.Id" name="iditem" id="iditem"/>
+                                </td>                               
+                            }
                         }
                         else
                         {
-                            <p style="color: red">Pas disponible pour le moement</p>
+                            @using (Html.BeginForm(actionName: "Recommander", "Stock", FormMethod.Post))
+                            {
+                                <td>
+                                    <input type="number" min="0" value=0 min max="@stock.Quantite" name="quantite" id="quantite"/>
+                                                                   
+                                   </td>
+                                <td>
+                                    <input type="hidden" value="@stock.Libelle" name="libelleitem" id="libelleitem"/>
+                                 <input type="submit" value="Recommander" id="recommander" style="color: red"/>
+                                 </td>
+                            }
+                    
                         }
                        
                     }
-                    
-                </td>
             </tr>
             
         }
-    }
+    
 </table>
     
 <a href="@CommandUser">
