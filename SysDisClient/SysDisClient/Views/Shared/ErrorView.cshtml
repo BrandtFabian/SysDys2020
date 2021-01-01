@@ -1,0 +1,22 @@
+﻿@model object
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    var reponse = ViewData["ReponseError"] as ReponseError;
+}
+
+<h1 class="text-danger">Un problème de service non connecté a été détecté</h1>
+<h2 class="text-danger">Le service remis en cause est @reponse.NomService</h2>
+
+
+<h3>Cause :</h3>
+<p>
+    Votre service est soit <strong>déconnecté</strong> ou <strong>une erreur est survenue</strong>.
+</p>
+<p>
+    <strong>Résolution :</strong>
+    Couper l'application
+    Redémarrer les services.
+    Si le problème perdure, veillez contactez<strong> les plus beaux développeurs</strong> pour vous aidez.
+   
+</p>

@@ -15,6 +15,7 @@ namespace SysDisClient.Controllers
         private static int _currentid = 0;
         private ReponseMenu menu = new ReponseMenu();
         private StockController st = new StockController();
+        private ReponseError error = new ReponseError();
 
         public OrderController()
         {
@@ -75,15 +76,18 @@ namespace SysDisClient.Controllers
             HttpResponseMessage responseMessage = _httpClient.GetAsync(path).Result;
             String response = responseMessage.Content.ReadAsStringAsync().Result;
             OrderReponse order = JsonSerializer.Deserialize<OrderReponse>(response);
+            ViewData["ReponseMenu"] = menu;
             
             if (order.Liste != null)
             {
                 ViewData["OrderReponse"] = order;
-                ViewData["ReponseMenu"] = menu;
+                
                 return View();
             }
-
-            return View("Error");
+          
+                error.NomService = "Service order";
+                ViewData["ReponseError"] = error;
+                return View("ErrorView");
         }
     }
 }

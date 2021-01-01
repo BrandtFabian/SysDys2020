@@ -35,6 +35,7 @@
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="OrderReponse.cs" t="Include" />
           <e p="ReferenceReponse.cs" t="Include" />
+          <e p="ReponseError.cs" t="Include" />
           <e p="ReponseMenu.cs" t="Include" />
           <e p="StockReponse.cs" t="Include" />
           <e p="UserReponse.cs" t="Include" />
@@ -79,6 +80,7 @@
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
+            <e p="ErrorView.cshtml" t="Include" />
           </e>
           <e p="Stock" t="Include">
             <e p="Index.cshtml" t="Include" />

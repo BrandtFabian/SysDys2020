@@ -73,6 +73,21 @@ public class OrderService {
         }
     }
 
+    public OrderItems GetOrderByStatus(Integer id) {
+        List<OrderItems> order=orderRepository.findAll();
+        OrderItems orderitem = null;
+
+        for (OrderItems x: order) {
+            if(x.getIdClient()==id && x.getStatus().equals("Attente")) {
+
+                       orderitem=x;
+            };
+        }
+      return orderitem;
+    }
+
+
+
     public int addOrder(int id, double prix, String status){
 
 

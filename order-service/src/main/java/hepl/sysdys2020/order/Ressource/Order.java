@@ -3,6 +3,7 @@ package hepl.sysdys2020.order.Ressource;
 import com.netflix.discovery.DiscoveryClient;
 import hepl.sysdys2020.order.Model.ListOrderItems;
 import hepl.sysdys2020.order.Model.OrderItems;
+import hepl.sysdys2020.order.Model.OrderRepository;
 import hepl.sysdys2020.order.Model.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,9 @@ public class Order {
 
     @Autowired
     OrderService orderService;
+
+    @Autowired
+    OrderRepository orderRepository;
 
     private DiscoveryClient discoveryClient;
 
@@ -73,6 +77,21 @@ public class Order {
         System.out.println(id +":"+prixtot);
         orderService.setIncreasePrixTot(id, prixtot);
         return true;
+    }
+
+    @RequestMapping("/seeifuserorder/{id}/{prix}")
+    public int IncreasePrixTot(@PathVariable("id")Integer id,@PathVariable("prix")double prix){
+
+       OrderItems order= orderService.GetOrderByStatus(id);
+       if(order!=null)
+       {
+           order.setStatus("Expédié");
+           order.setPrixTotal(prix);
+           orderRepository.save(order);
+           return order.getIdOrder();
+       }
+       return 0;
+
     }
 
     @RequestMapping("/test")

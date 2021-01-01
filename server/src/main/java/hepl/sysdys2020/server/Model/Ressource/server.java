@@ -131,6 +131,18 @@ public class server {
 
         return ok;
     }
+    @RequestMapping("/user/orderwaiting/{idclient}/{prix}")
+    public int OrderUsers(@PathVariable("idclient") Integer idclient,@PathVariable("prix") double prix) {
+        int ok = builder.build()
+                .get()
+                .uri("http://order-service/order/seeifuserorder/"+idclient+"/"+prix)
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+
+
+        return ok;
+    }
 
     @RequestMapping("get/panier/{id}")//afficher panier par id client
     public ListCartItems GetCartItems(@PathVariable("id") Integer id) {

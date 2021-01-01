@@ -21,6 +21,8 @@ namespace SysDisClient.Controllers
         private ReponseMenu menu = new ReponseMenu();
         private UserReponse user = new UserReponse();
         private StockController st = new StockController();
+        private ReponseError error = new ReponseError();
+
 
         public CartController()
         {
@@ -202,15 +204,32 @@ namespace SysDisClient.Controllers
 
             string status = "En attente de payement";
 
+            
+            string lookifuserorderwaiting = "http://localhost:8090/server/user/orderwaiting/" + _currentid + "/" +
+                          prix.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+            HttpResponseMessage messagewaiting = _httpClient.GetAsync(lookifuserorderwaiting).Result;
+            String reponsewiting = messagewaiting.Content.ReadAsStringAsync().Result;
+            if (messagewaiting.IsSuccessStatusCode==false)
+            {
+               
+                return RedirectToAction("RecapView", new RouteValueDictionary(
+                    new {controller = "Cart", action = "RecapView"}));
+            }
+            int order = JsonSerializer.Deserialize<int>(reponsewiting);
 
-            string path = "http://localhost:8090/server/create/order/" + _currentid + "/" +
-                          prix.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture) + "/" + status;
-            // http://localhost:8090/server/create/order/1/20000/Preparation
-            HttpResponseMessage message = _httpClient.GetAsync(path).Result;
-            String r = message.Content.ReadAsStringAsync().Result;
-            int idorder = JsonSerializer.Deserialize<int>(r);
+            if (order == 0)
+            {
+                string path = "http://localhost:8090/server/create/order/" + _currentid + "/" +
+                              prix.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture) + "/" + status;
+                // http://localhost:8090/server/create/order/1/20000/Preparation
+                HttpResponseMessage message = _httpClient.GetAsync(path).Result;
+                String r = message.Content.ReadAsStringAsync().Result;
+                order = JsonSerializer.Deserialize<int>(r);
 
-            _currentorder = idorder;
+                
+            }
+            _currentorder = order;
+          
 
             bool expressCheck = false;
             string livraison = "";
@@ -233,7 +252,7 @@ namespace SysDisClient.Controllers
 
             }
 
-            string upprice = "http://localhost:8090/server/delivery/amount/" + idorder + "/" + livraison;
+            string upprice = "http://localhost:8090/server/delivery/amount/" + order + "/" + livraison;
             HttpResponseMessage Rmessage = _httpClient.GetAsync(upprice).Result;
             String reponse = Rmessage.Content.ReadAsStringAsync().Result;
             bool upok = JsonSerializer.Deserialize<bool>(reponse);
@@ -250,6 +269,8 @@ namespace SysDisClient.Controllers
         {
 
             menu.Connected = true;
+            ViewData["ReponseMenu"] = menu;
+            
             String path = "http://localhost:8090/server/panier/" + _currentid;
             HttpResponseMessage message = _httpClient.GetAsync(path).Result;
             String r = message.Content.ReadAsStringAsync().Result;
@@ -262,7 +283,15 @@ namespace SysDisClient.Controllers
             
             String getprice = "http://localhost:8090/server/order/prix/" + _currentorder;
             HttpResponseMessage messageprice = _httpClient.GetAsync(getprice).Result;
+            
+           
             String rprice = messageprice.Content.ReadAsStringAsync().Result;
+            if (messageprice.IsSuccessStatusCode==false)
+            {
+                error.NomService = "Order Service";
+                ViewData["ReponseError"] = error;
+                return View("ErrorView");
+            }
             double pricewithtransport = JsonSerializer.Deserialize<double>(rprice);
             cartR.PrixTotal = pricewithtransport;
             montanttotal = pricewithtransport;
@@ -273,13 +302,16 @@ namespace SysDisClient.Controllers
                 if (cartR.Liste != null)
                 {
                     ViewData["CartReponse"] = cartR;
-                    ViewData["ReponseMenu"] = menu;
+                   
                     ViewData["UserReponse"] = user;
                     return View();
                 }
             }
 
-            return View("Error");
+           
+            ViewData["ReponseError"] = error;
+            return View("ErrorView");
+          
         }
 
 

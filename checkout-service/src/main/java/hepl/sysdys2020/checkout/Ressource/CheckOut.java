@@ -22,7 +22,7 @@ public class CheckOut {
     public Boolean Waitingcommande(@PathVariable("id")Integer id, @PathVariable("type")String type){
         //todo rajouter dans le prix total selon le type
         int prix = 5;
-        if(type=="express")
+        if(type.equals("express"))
             prix = 10;
         boolean bool = builder.build().get().uri("http://order-service/order/increaseprix/"+id+"/"+prix).retrieve().bodyToMono(boolean.class).block();
         //todo changé la commande de en prepa en livraison
