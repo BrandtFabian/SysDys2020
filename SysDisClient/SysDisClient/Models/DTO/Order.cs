@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
+using Microsoft.VisualBasic;
 
 namespace SysDisClient.Models.DTO
 {

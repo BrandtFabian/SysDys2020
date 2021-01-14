@@ -41,11 +41,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-/*
+
         http
          .authorizeRequests()
                 ///stock + panier
-                .antMatchers("/user/panier/**").permitAll()
+                .antMatchers("/user/panier/**").authenticated()
                 .antMatchers("/create/cart/**").permitAll()
                 .antMatchers("/cart/add/**").permitAll()
                 .antMatchers("/delete/add/**").permitAll()
@@ -59,7 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                ;
 
- */
+
     }
 
 

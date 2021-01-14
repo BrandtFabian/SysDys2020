@@ -213,13 +213,14 @@ namespace SysDisClient.Controllers
         
         [HttpGet]
         [Route("/login")]
-        public ViewResult Login()
+       public ViewResult Login()
         {
             StockReponse stock = new StockReponse();
             ViewData["StockReponse"] = stock;
             ViewData["ReponseMenu"] = menu;
             return View();
         }
+        
         public ActionResult LogOut()
         {
             menu.Connected = false;

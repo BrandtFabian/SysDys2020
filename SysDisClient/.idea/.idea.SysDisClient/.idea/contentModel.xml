@@ -85,11 +85,13 @@
           <e p="Stock" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
+            <e p="Login1.cshtml" t="Include" />
             <e p="LoginRappel.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
+            <e p="LoginView.css" t="Include" />
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
@@ -103,6 +105,7 @@
             <e p="prof.jpg" t="Include" />
           </e>
           <e p="js" t="Include">
+            <e p="Login.js" t="Include" />
             <e p="site.js" t="Include" />
           </e>
           <e p="lib" t="Include">

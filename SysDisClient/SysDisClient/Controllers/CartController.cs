@@ -348,7 +348,7 @@ namespace SysDisClient.Controllers
                 new {controller = "Cart", action = "RecapView"}));
         }
         
-        public void AllInformationAboutUser(string sql,int id)
+        public UserReponse AllInformationAboutUser(string sql,int id)
         {
             MySqlConnection conn = Context.GetDBConnection();
             conn.Open();
@@ -380,7 +380,7 @@ namespace SysDisClient.Controllers
             conn.Close();
             // Disposez un objet, libérez des ressources.
             conn.Dispose();
-            //return empId;
+            return user;
         }
         
         public void Update(string sql,double montant)

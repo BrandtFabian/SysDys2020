@@ -142,6 +142,7 @@ public class stock {
     public void consumeMessage(String message) {
         List<String> quantite = Arrays.asList(message.split("/"));
 
+        
         if (message.equals("rien") == true & OnchangeMessage==false) {
             messageIn=message;
             OnchangeMessage=true;

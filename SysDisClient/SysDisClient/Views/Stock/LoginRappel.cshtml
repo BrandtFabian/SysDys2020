@@ -5,20 +5,49 @@
     Layout = "_Layout";
 }
 
-<h2 style="color: red">Vous devez etre connecter pour accéder à cette partie du site! </h2>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="~/css/LoginView.css"/>
+
+
 @using (Html.BeginForm(actionName: "MustLog", "Stock", FormMethod.Post))
 {
-    <div id="FormulaireConnection" class="row register-form">
-        <div class="col-md-8 offset-md-2">
-            <h1>Connection</h1>
-            <div class="form-row form-group">
-                <div class="col-sm-4 label-column"><label class="col-form-label">Nom d'utilisateur</label></div>
-                <div class="col-sm-6 input-column"><input id="name" name="name" type="text" class="form-control" required/></div>
+    <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center" style="color: red">Vous devez etre connecter pour accéder à cette partie du site! </h2>
+                <form class="login-form">
+                    <div class="form-row form-group">
+                        <div class="col-sm-4 label-column"><label class="col-form-label">Nom d'utilisateur</label></div>
+                        <div class="col-sm-6 input-column"><input id="name" name="name" type="text" class="form-control" required/></div>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-sm-4 label-column"><label class="col-form-label">Mot de passe</label></div>
+                        <div class="col-sm-6 input-column"><input id="pwd" name="pwd" type="password" class="form-control" required/></div>
+                    </div><input type="submit" class="btn btn-light submit-button" value="connecter" id="submit"/>
+  
+                </form>
             </div>
-            <div class="form-row form-group">
-                <div class="col-sm-4 label-column"><label class="col-form-label">Mot de passe</label></div>
-                <div class="col-sm-6 input-column"><input id="pwd" name="pwd" type="password" class="form-control" required/></div>
-            </div><input type="submit" class="btn btn-light submit-button" value="connecter" id="submit"/>
-        </div>
-    </div>
+            <div class="col-md-8 banner-sec">
+               <div class="container">
+               
+                   <div class="slider">
+                     <img class="active" src="/images/divers.jpg">
+                     <img src="/images/jeux.jpg">
+                     <img src="/images/livres.jpg" >
+                   </div>
+               
+                   <div class="cont-btn">
+                     <div class="btn-nav left">←</div>
+                     <div class="btn-nav right">→</div>
+                   </div>
+               
+                 </div>
+
+		    
+                </div>
+            </div>
+    
+ 
 }
+<script src="~/js/Login.js"/>

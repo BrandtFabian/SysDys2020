@@ -4,7 +4,32 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
     var reponse = ViewData["OrderReponse"] as OrderReponse;
+    var user = ViewData["UserReponse"] as UserReponse;
+    int num = 1;
 }
+
+  <h2>Profil du client</h2>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Photo de profil</th>
+        <th>Nom du destinaire</th>
+        <th>Son adresse de livraison</th>
+        <th>Votre solde</th>
+
+    </tr>
+    <tr>
+                <td>
+                        @{
+                            String pdp = "/images/";
+                            pdp += user.Nom+".jpg";
+                        }
+                        <img width="100" src="@pdp">
+                </td>
+                <td>@user.Nom</td>
+        <td>@user.Adresse</td>
+        <td>@user.Portefeuille€</td>
+    </tr>
+</table>
 
 <h2>Liste des commandes en cours</h2>
 <table class="table table-striped table-bordered">
@@ -27,9 +52,10 @@
                 <img width="100" src="@poster">
             </td>
             
-            <td>@order.IdOrder</td>
+            <td>@num</td>
             <td>@order.Status</td>
             <td>@order.PrixTotal</td>
         </tr>
+        num++;
     }
 </table>

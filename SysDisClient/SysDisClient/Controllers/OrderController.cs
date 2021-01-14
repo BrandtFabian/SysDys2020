@@ -15,7 +15,9 @@ namespace SysDisClient.Controllers
         private static int _currentid = 0;
         private ReponseMenu menu = new ReponseMenu();
         private StockController st = new StockController();
+        private CartController cart = new CartController();
         private ReponseError error = new ReponseError();
+        private UserReponse user = new UserReponse();
 
         public OrderController()
         {
@@ -78,10 +80,13 @@ namespace SysDisClient.Controllers
             OrderReponse order = JsonSerializer.Deserialize<OrderReponse>(response);
             ViewData["ReponseMenu"] = menu;
             
+            string sqldata= "SELECT * from users WHERE user_id = @id";
+            user=cart.AllInformationAboutUser(sqldata,_currentid);
+            
             if (order.Liste != null)
             {
                 ViewData["OrderReponse"] = order;
-                
+                ViewData["UserReponse"] = user;
                 return View();
             }
           

@@ -23,58 +23,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2adb8d3-557c-4459-8270-8301b3bdbefd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SysDisClient/Models/ReponseError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SysDisClient/Views/Shared/ErrorView.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SysDisClient/Views/Stock/Login1.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SysDisClient/wwwroot/css/LoginView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SysDisClient/wwwroot/js/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SysDisClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SysDisClient/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SysDisClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SysDisClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../checkout-service/src/main/java/hepl/sysdys2020/checkout/Ressource/CheckOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/../checkout-service/src/main/java/hepl/sysdys2020/checkout/Ressource/CheckOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/src/main/java/hepl/sysdys2020/order/Model/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/src/main/java/hepl/sysdys2020/order/Model/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/src/main/java/hepl/sysdys2020/order/Ressource/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/src/main/java/hepl/sysdys2020/order/Ressource/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../order-service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/hepl/sysdys2020/server/Model/Ressource/server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/hepl/sysdys2020/server/Model/Ressource/server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Models/DTO/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Models/DTO/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Views/Order/SeeOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Views/Order/SeeOrder.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Views/Stock/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Views/Stock/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SysDisClient/Views/Stock/LoginRappel.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SysDisClient/Views/Stock/LoginRappel.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-service/src/main/java/hepl/sysdys2020/stock/Ressource/stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-service/src/main/java/hepl/sysdys2020/stock/Ressource/stock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B59107FF-4E89-4FD5-A263-B9B0E20878B3/13/StaticFileMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CF23F803-6603-41BB-8074-AD1FFDA9DE78/16/EndpointRoutingMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/CF23F803-6603-41BB-8074-AD1FFDA9DE78/16/EndpointRoutingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/194/ObjectMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/F3/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/FE/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20735148-1523-4917-A5E8-F91B0B239405/5/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/legra/OneDrive/Bureau/S.D/DossierFinal/SysDys2020/SysDisClient/SysDisClient/Views/Shared/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -97,32 +84,35 @@
         <option value="$PROJECT_DIR$/SysDisClient/Models/CartReponse.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Models/OrderReponse.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Order/OrderView.cshtml" />
-        <option value="$PROJECT_DIR$/SysDisClient/Models/DTO/Order.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Order/Index.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Log/Login.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Pages/Stock/Login.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/SysDisClient/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/LoginRappel.cshtml" />
-        <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/Login.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Controllers/ContextUser.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Models/DTO/Users.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Controllers/AccesDatabase/DbManager.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Controllers/AccesDatabase/Context.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Models/ReponseMenu.cs" />
-        <option value="$PROJECT_DIR$/SysDisClient/Views/Order/SeeOrder.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Program.cs" />
-        <option value="$PROJECT_DIR$/SysDisClient/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/Index.cshtml" />
-        <option value="$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Cart/CommandeUser.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Models/UserReponse.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Cart/RecapView.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Models/ReponseError.cs" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Shared/ErrorView.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Views/Shared/Error.cshtml" />
-        <option value="$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs" />
+        <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/LoginForm.cshtml" />
+        <option value="$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs" />
+        <option value="$PROJECT_DIR$/SysDisClient/wwwroot/js/Login.js" />
+        <option value="$PROJECT_DIR$/SysDisClient/wwwroot/css/LoginView.css" />
+        <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/Login.cshtml" />
+        <option value="$PROJECT_DIR$/SysDisClient/Views/Stock/LoginRappel.cshtml" />
+        <option value="$PROJECT_DIR$/SysDisClient/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs" />
+        <option value="$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs" />
+        <option value="$PROJECT_DIR$/SysDisClient/Models/DTO/Order.cs" />
+        <option value="$PROJECT_DIR$/SysDisClient/Views/Order/SeeOrder.cshtml" />
       </list>
     </option>
   </component>
@@ -139,6 +129,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -200,6 +191,7 @@
       <workItem from="1609107953349" duration="2681000" />
       <workItem from="1609190756302" duration="16454000" />
       <workItem from="1609506287482" duration="7571000" />
+      <workItem from="1610568827349" duration="9914000" />
     </task>
     <servers />
   </component>
@@ -224,15 +216,20 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="536" y="164" key="#Inspection_severity" timestamp="1610569850637">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="164" key="#Inspection_severity/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610569850637" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609068637874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609068637874" />
-    <state width="408" height="466" key="DebuggerActiveHint" timestamp="1609094938981">
+    <state width="408" height="466" key="DebuggerActiveHint" timestamp="1610620175701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="408" height="466" key="DebuggerActiveHint/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609094938981" />
-    <state width="1877" height="374" key="GridCell.Tab.0.bottom" timestamp="1609517267031">
+    <state width="408" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620175701" />
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1610620822390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085524969" />
@@ -246,7 +243,8 @@
     <state width="1877" height="374" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267031" />
     <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511700382" />
     <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609192405693" />
-    <state width="1877" height="374" key="GridCell.Tab.0.center" timestamp="1609517267029">
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620822390" />
+    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1610620822390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085524968" />
@@ -260,7 +258,8 @@
     <state width="1877" height="374" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267029" />
     <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511700381" />
     <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609192405693" />
-    <state width="1877" height="374" key="GridCell.Tab.0.left" timestamp="1609517267029">
+    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620822390" />
+    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1610620822390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085524968" />
@@ -274,7 +273,8 @@
     <state width="1877" height="374" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267029" />
     <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511700381" />
     <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609192405693" />
-    <state width="1877" height="374" key="GridCell.Tab.0.right" timestamp="1609517267030">
+    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620822390" />
+    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1610620822390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085524969" />
@@ -288,7 +288,8 @@
     <state width="1877" height="374" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267030" />
     <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511700381" />
     <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609192405693" />
-    <state width="1877" height="374" key="GridCell.Tab.1.bottom" timestamp="1609517267034">
+    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620822390" />
+    <state width="1877" height="374" key="GridCell.Tab.1.bottom" timestamp="1610620376250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523773" />
@@ -298,7 +299,8 @@
     <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267034" />
     <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695249" />
-    <state width="1877" height="374" key="GridCell.Tab.1.center" timestamp="1609517267032">
+    <state width="1877" height="374" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376250" />
+    <state width="1877" height="374" key="GridCell.Tab.1.center" timestamp="1610620376249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523772" />
@@ -308,7 +310,8 @@
     <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267032" />
     <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695248" />
-    <state width="1877" height="374" key="GridCell.Tab.1.left" timestamp="1609517267031">
+    <state width="1877" height="374" key="GridCell.Tab.1.center/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376249" />
+    <state width="1877" height="374" key="GridCell.Tab.1.left" timestamp="1610620376249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523772" />
@@ -318,7 +321,8 @@
     <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267031" />
     <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695247" />
-    <state width="1877" height="374" key="GridCell.Tab.1.right" timestamp="1609517267033">
+    <state width="1877" height="374" key="GridCell.Tab.1.left/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376249" />
+    <state width="1877" height="374" key="GridCell.Tab.1.right" timestamp="1610620376250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523772" />
@@ -328,7 +332,8 @@
     <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267033" />
     <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695248" />
-    <state width="1877" height="374" key="GridCell.Tab.2.bottom" timestamp="1609517267036">
+    <state width="1877" height="374" key="GridCell.Tab.1.right/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376250" />
+    <state width="1877" height="374" key="GridCell.Tab.2.bottom" timestamp="1610620376252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523774" />
@@ -338,7 +343,8 @@
     <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267036" />
     <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.2.center" timestamp="1609517267035">
+    <state width="1877" height="374" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376252" />
+    <state width="1877" height="374" key="GridCell.Tab.2.center" timestamp="1610620376251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523773" />
@@ -348,7 +354,8 @@
     <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267035" />
     <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695249" />
-    <state width="1877" height="374" key="GridCell.Tab.2.left" timestamp="1609517267034">
+    <state width="1877" height="374" key="GridCell.Tab.2.center/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376251" />
+    <state width="1877" height="374" key="GridCell.Tab.2.left" timestamp="1610620376250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523773" />
@@ -358,7 +365,8 @@
     <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856988" />
     <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267034" />
     <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695249" />
-    <state width="1877" height="374" key="GridCell.Tab.2.right" timestamp="1609517267035">
+    <state width="1877" height="374" key="GridCell.Tab.2.left/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376250" />
+    <state width="1877" height="374" key="GridCell.Tab.2.right" timestamp="1610620376251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523773" />
@@ -368,7 +376,8 @@
     <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267035" />
     <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695249" />
-    <state width="1877" height="374" key="GridCell.Tab.3.bottom" timestamp="1609517267037">
+    <state width="1877" height="374" key="GridCell.Tab.2.right/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376251" />
+    <state width="1877" height="374" key="GridCell.Tab.3.bottom" timestamp="1610620376256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523775" />
@@ -378,7 +387,8 @@
     <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267037" />
     <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.3.center" timestamp="1609517267036">
+    <state width="1877" height="374" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376256" />
+    <state width="1877" height="374" key="GridCell.Tab.3.center" timestamp="1610620376253">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523774" />
@@ -388,7 +398,8 @@
     <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267036" />
     <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.3.left" timestamp="1609517267036">
+    <state width="1877" height="374" key="GridCell.Tab.3.center/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376253" />
+    <state width="1877" height="374" key="GridCell.Tab.3.left" timestamp="1610620376252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523774" />
@@ -398,7 +409,8 @@
     <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267036" />
     <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.3.right" timestamp="1609517267037">
+    <state width="1877" height="374" key="GridCell.Tab.3.left/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376252" />
+    <state width="1877" height="374" key="GridCell.Tab.3.right" timestamp="1610620376254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523775" />
@@ -408,7 +420,8 @@
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267037" />
     <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.4.bottom" timestamp="1609517267039">
+    <state width="1877" height="374" key="GridCell.Tab.3.right/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376254" />
+    <state width="1877" height="374" key="GridCell.Tab.4.bottom" timestamp="1610620376258">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523777" />
@@ -418,7 +431,8 @@
     <state width="1877" height="374" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.4.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267039" />
     <state width="1877" height="374" key="GridCell.Tab.4.bottom/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695251" />
-    <state width="1877" height="374" key="GridCell.Tab.4.center" timestamp="1609517267038">
+    <state width="1877" height="374" key="GridCell.Tab.4.bottom/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376258" />
+    <state width="1877" height="374" key="GridCell.Tab.4.center" timestamp="1610620376257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523776" />
@@ -428,7 +442,8 @@
     <state width="1877" height="374" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.4.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267038" />
     <state width="1877" height="374" key="GridCell.Tab.4.center/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.4.left" timestamp="1609517267038">
+    <state width="1877" height="374" key="GridCell.Tab.4.center/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376257" />
+    <state width="1877" height="374" key="GridCell.Tab.4.left" timestamp="1610620376257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523775" />
@@ -438,7 +453,8 @@
     <state width="1877" height="374" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.4.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267038" />
     <state width="1877" height="374" key="GridCell.Tab.4.left/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695250" />
-    <state width="1877" height="374" key="GridCell.Tab.4.right" timestamp="1609517267039">
+    <state width="1877" height="374" key="GridCell.Tab.4.left/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376257" />
+    <state width="1877" height="374" key="GridCell.Tab.4.right" timestamp="1610620376258">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="374" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@-1920.-13.1920.1040" timestamp="1609085523776" />
@@ -448,6 +464,7 @@
     <state width="1877" height="374" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608638856989" />
     <state width="1877" height="374" key="GridCell.Tab.4.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609517267039" />
     <state width="1877" height="374" key="GridCell.Tab.4.right/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@1920.0.1920.1040" timestamp="1609511695251" />
+    <state width="1877" height="374" key="GridCell.Tab.4.right/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610620376258" />
     <state x="72" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1608556200897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -476,14 +493,15 @@
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608629731876" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040/-1920.-13.1920.1040@0.0.1920.1040" timestamp="1609515011747" />
-    <state x="498" y="210" width="898" height="721" key="dock-window-1" timestamp="1609190698483">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1661" y="-12" width="1365" height="722" maximized="true" key="dock-window-1" timestamp="1610619499114">
+      <screen x="-1920" y="9" width="1920" height="1040" />
     </state>
     <state x="-1860" y="-23" width="1634" height="720" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.-13.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608994700775" />
     <state x="-8" y="-8" width="1936" height="1096" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608735438432" />
     <state x="-1005" y="103" width="782" height="717" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1608583249225" />
     <state x="342" y="-23" width="782" height="717" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608632767990" />
     <state x="498" y="210" width="898" height="721" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609190698483" />
+    <state x="-1661" y="-12" width="1365" height="722" maximized="true" key="dock-window-1/0.0.1920.1040/1920.22.1920.1040/-1920.9.1920.1040@0.0.1920.1040" timestamp="1610619499114" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1608633395525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -498,58 +516,26 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs</url>
-          <line>74</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\OrderController.cs" initialLine="24">
-            <startOffsets>
-              <option value="-1" />
-            </startOffsets>
-            <endOffsets>
-              <option value="-1" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>63</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="37">
-            <startOffsets>
-              <option value="1340" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1380" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs</url>
-          <line>250</line>
+          <line>251</line>
           <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\StockController.cs" initialLine="223" />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs</url>
-          <line>273</line>
+          <line>274</line>
           <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\StockController.cs" initialLine="239" />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs</url>
-          <line>76</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\OrderController.cs" initialLine="58" />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs</url>
-          <line>228</line>
+          <line>229</line>
           <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\StockController.cs" initialLine="165" />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs</url>
-          <line>382</line>
+          <line>383</line>
           <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\StockController.cs" initialLine="313" />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
@@ -560,131 +546,23 @@
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>172</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="159" />
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>173</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="160" />
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>334</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="283" />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>333</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="282" />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>331</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="280" />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SysDisClient/Controllers/StockController.cs</url>
-          <line>310</line>
+          <line>311</line>
           <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\SysDys2020\SysDisClient\SysDisClient\Controllers\StockController.cs" initialLine="263" />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>207</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="205">
+          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/OrderController.cs</url>
+          <line>82</line>
+          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\OrderController.cs" initialLine="82">
             <startOffsets>
-              <option value="7038" />
+              <option value="3021" />
             </startOffsets>
             <endOffsets>
-              <option value="7240" />
+              <option value="3079" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>219</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="213">
-            <startOffsets>
-              <option value="7767" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7782" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>230</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="224">
-            <startOffsets>
-              <option value="8349" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8371" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>217</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="211">
-            <startOffsets>
-              <option value="7694" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7753" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>210</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="210">
-            <startOffsets>
-              <option value="7355" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7428" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>274</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="272">
-            <startOffsets>
-              <option value="9681" />
-            </startOffsets>
-            <endOffsets>
-              <option value="9745" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SysDisClient/Controllers/CartController.cs</url>
-          <line>273</line>
-          <properties documentPath="C:\Users\legra\OneDrive\Bureau\S.D\DossierFinal\SysDys2020\SysDisClient\SysDisClient\Controllers\CartController.cs" initialLine="271">
-            <startOffsets>
-              <option value="9602" />
-            </startOffsets>
-            <endOffsets>
-              <option value="9668" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="85" />
+          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

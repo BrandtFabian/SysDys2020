@@ -51,8 +51,11 @@ public class server {
             for (stockItems x:userStock.getUserStock() )
             {
                 //x.setQuantite(x.getQuantite()-listint.get(i));
+                if(x.getQuantite()!=0)
+                {
+                    UpdateStockminus(index,listint.get(i));
+                }
 
-                UpdateStockminus(index,listint.get(i));
                 i++;
                 index++;
             }
